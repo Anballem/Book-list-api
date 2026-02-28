@@ -4,13 +4,11 @@ const connectDB = require("../config/db");
 
 const PORT = process.env.PORT || 3001;
 
-connectDB()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Listening on port ${PORT}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Error connecting to MongoDB:", error.message);
-    process.exit(1);
-  });
+connectDB().catch((error) => {
+  console.error("Error connecting to MongoDB:", error.message);
+  console.warn("Starting API without MongoDB. Using in-memory fallback.");
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+});
