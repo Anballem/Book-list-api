@@ -85,7 +85,7 @@ This structure follows **MVC best practices** and keeps the codebase maintainabl
 
 **POST** `/api/books`
 
-````json
+```json
 {
   "title": "Atomic Habits",
   "author": "James Clear",
@@ -103,15 +103,6 @@ npm install
 npm run dev
 
 
-⚙️ Configuration
-Create a `.env` file in the root directory and add your MongoDB connection string:
-
-```env
-MONGO_URI=your_mongodb_connection_string_here
-````
-
-You can get your MongoDB connection string from MongoDB Atlas or use a local MongoDB instance.
-
 🌍 Deployment
 This API is deployed using Render
 with a MongoDB Atlas cloud database.
@@ -127,8 +118,7 @@ Frontend client (MERN stack)
 
 👩🏽‍💻 Author
 Annette Ballet
-Aspiring Full-Stack / Backend Developer
 
-```
+Aspiring Full-Stack / Backend Developer
 
 ```
